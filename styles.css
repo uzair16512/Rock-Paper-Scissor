@@ -1,0 +1,115 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box; /* Better layout control */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f8ff; /* light background */
+}
+
+body{
+  padding: 0;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+h1{
+  background-color: #082b31;
+  color: #ffff;
+  height: 5rem;
+  text-align: center;
+  line-height: 5rem;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.choice{
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+.choice:hover{
+  cursor: pointer;
+  background-color: #082b31;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(1.1); /* zoom on hover */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  
+}
+
+img{
+  height: 130px;
+  width: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.choices{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+
+}
+.score-board{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  gap: 2rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  border: 1px solid #082b31;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: fit-content; 
+}
+#user-score,
+#comp-score{
+  font-size: 3rem;
+  color: #082b31;
+  font-weight: bold;
+}
+
+.msg-container{
+  margin-top: 3rem;
+  padding: 1rem 0;
+}
+
+#msg{
+  background-color: #082b31;
+  color: #ffff;
+  /* font-size: 2rem;
+  display: inline;
+  padding: 1rem;
+  border-radius: 1rem; */
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  display: inline-block;
+  box-shadow: 0 0 15px rgba(8, 43, 49, 0.5);
+  animation: popUp 0.3s ease-in-out;
+}
+
+/* Animation */
+@keyframes popUp {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
